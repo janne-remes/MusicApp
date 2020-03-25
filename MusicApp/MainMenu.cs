@@ -54,8 +54,10 @@ namespace MusicApp
             Console.ResetColor();
 
             Console.WriteLine("");
-            Console.WriteLine("1. Tulosta artistit");
-            Console.WriteLine("2. Tulosta levyt");
+            Console.WriteLine("1: Tulosta artistit");
+            Console.WriteLine("2: Tulosta levyt");
+
+            //Console.WriteLine("\nLopeta [X]");
 
             Console.WriteLine("");
             Console.Write("Syötä valintasi: ");
@@ -79,8 +81,13 @@ namespace MusicApp
 
             else
             {
-                switch (selection)
+                int usersChoice = int.Parse(selection);
+
+                switch (usersChoice)
                 {
+                    case 1:
+                        dh.printArtistList();
+                        break;
                     default:
                         Console.Clear();
                         break;

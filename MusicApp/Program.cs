@@ -8,6 +8,8 @@ namespace MusicApp
         {
             var dh = new DataHandler();
 
+            dh.insertExampleArtists();
+
             MainMenu mainMenu = new MainMenu(dh);
             mainMenu.InitializeMainMenu();
 
