@@ -6,9 +6,11 @@ namespace MusicApp
     {
         static void Main(string[] args)
         {
+            //Artist artist = new Artist("Pink Floyd");
+            
             var dh = new DataHandler();
 
-            dh.insertExampleArtists();
+            //dh.insertExampleArtists();
 
             MainMenu mainMenu = new MainMenu(dh);
             mainMenu.InitializeMainMenu();

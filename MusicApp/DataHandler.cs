@@ -9,14 +9,16 @@ namespace MusicApp
         public List<Artist> artists = new List<Artist>();
         public List<Album> albums = new List<Album>();
 
-        public void insertExampleArtists()
-        {
-            this.artists.Add(new Artist("Pink Floyd"));
-            this.artists.Add(new Artist("Nirvana"));
-        }
+        //public void insertExampleArtists()
+        //{
+        //    this.artists.Add(new Artist("Pink Floyd"));
+        //    this.artists.Add(new Artist("Nirvana"));
+        //}
 
         public Artist createNewArtist()
         {
+            Console.Clear();
+            
             Console.WriteLine("Anna artistin nimi");
 
             string artisti = Console.ReadLine();
@@ -26,12 +28,18 @@ namespace MusicApp
             // TESTAUS alkaa: siirto AddArtistToList():sta
             this.artists.Add(newArtist);
 
-            Console.WriteLine("\nArtisti lisätty listaan");
             // TESTAUS päättyy: siirto AddArtistToList():sta
 
-            Console.ReadKey();
+            //Console.ReadKey();
+
+            Console.Clear();
+
+            Console.WriteLine("\nArtisti lisätty listaan");
+
+            printArtistList();
 
             return newArtist;
+
         }
 
         //public Artist addArtistToList()
@@ -53,7 +61,7 @@ namespace MusicApp
             
             for (int i = 0; i < this.artists.Count; i++)
             {
-                Console.WriteLine($"{i+1}: {this.artists[i].artistName}");
+                Console.WriteLine($"{i + 1}: {this.artists[i].artistName}");
             }
 
             Console.WriteLine("\n");
@@ -66,9 +74,13 @@ namespace MusicApp
             {
                 Console.WriteLine("");
                 createNewArtist();
-
-
             }
+        }
+
+        public void insertExampleAlbums()
+        {
+            //this.albums.Add(new Album("The Dark Side of the Moon", pinkFloyd));
+            //this.artists.Add(new Artist("Nirvana"));
         }
     }
 }

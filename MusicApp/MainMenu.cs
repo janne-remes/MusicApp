@@ -54,8 +54,10 @@ namespace MusicApp
             Console.ResetColor();
 
             Console.WriteLine("");
-            Console.WriteLine("1: Tulosta artistit");
-            Console.WriteLine("2: Tulosta levyt");
+            Console.WriteLine("1 Anna artisti");
+            Console.WriteLine("\t2 Tulosta artistilista");
+            Console.WriteLine("3 Anna albumi");
+            Console.WriteLine("\t4 Tulosta albumilista");
 
             //Console.WriteLine("\nLopeta [X]");
 
@@ -86,7 +88,7 @@ namespace MusicApp
                 switch (usersChoice)
                 {
                     case 1:
-                        dh.printArtistList();
+                        dh.createNewArtist();
                         break;
                     default:
                         Console.Clear();
